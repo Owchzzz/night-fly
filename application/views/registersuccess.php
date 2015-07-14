@@ -1,0 +1,1 @@
+<h1>Success Registration! Please Check you email</h1>

@@ -1,0 +1,15 @@
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|images|robots\.txt)
+
+RewriteCond $1 !^assets/
+RewriteCond $1 !^old/
+RewriteRule ^(.*)$ /index.php/$1 [L]
+<IfModule mod_headers.c>
+Header add Cache-Control:  "no-store, no-cache, must-revalidate"
+</IfModule>
+php_flag display_errors on
+
+<Directory /var/www/nightfly/data/www/night-fly.xxx/media/>
+Allow from all
+</Directory>
